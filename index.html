@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honolulu Urgent Care Clinic | Walk-In Medical Care in Honolulu, HI</title>
+<meta name="description" content="Honolulu Urgent Care Clinic provides quality walk-in medical care in Honolulu, HI. Open 7 days a week. Treatment for injuries, illnesses, STD screening, TB testing, and more. Call 808-470-5555.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-600-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/playfair-display@latest/latin-700-normal.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #0891b2;
+  --primary-dark: #0e7490;
+  --secondary: #1e3a8a;
+  --accent: #f97316;
+  --accent-dark: #ea580c;
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --bg: #ffffff;
+  --bg-light: #f9fafb;
+  --bg-blue: #ecfeff;
+  --border: #e5e7eb;
+  --success: #10b981;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bg);
+}
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--secondary); }
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2.25rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+p { margin-bottom: 1rem; color: var(--text); }
+a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Top Bar */
+.top-bar {
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.top-bar a { color: #fff; margin-left: 1rem; }
+.top-bar a:hover { color: var(--accent); }
+.top-bar .info-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+/* Header */
+header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo img { height: 60px; width: auto; }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  align-items: center;
+}
+nav ul li a {
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+nav ul li a:hover, nav ul li a.active {
+  color: var(--primary);
+  background: var(--bg-blue);
+}
+.dropdown { position: relative; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 260px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s;
+  z-index: 100;
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  font-weight: 500;
+  border-radius: 0;
+}
+.dropdown-menu li a:hover { background: var(--bg-blue); color: var(--primary); }
+.cta-btn {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s !important;
+}
+.cta-btn:hover {
+  background: var(--accent-dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.92), rgba(30, 58, 138, 0.88)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600') center/cover;
+  color: #fff;
+  padding: 6rem 0;
+  position: relative;
+}
+.hero-content { max-width: 750px; }
+.hero h1 { color: #fff; font-size: 3.25rem; margin-bottom: 1.25rem; font-family: 'Playfair Display', serif; }
+.hero p { color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 2rem; }
+.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4); }
+.btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+.btn-outline:hover { background: #fff; color: var(--secondary); }
+
+/* Section */
+section { padding: 5rem 0; }
+.section-light { background: var(--bg-light); }
+.section-blue { background: var(--bg-blue); }
+.section-title { text-align: center; margin-bottom: 3rem; }
+.section-title h2 { margin-bottom: 0.75rem; }
+.section-title p { color: var(--text-light); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(8, 145, 178, 0.15);
+  border-color: var(--primary);
+}
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #fff;
+  font-size: 1.75rem;
+}
+.service-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+.service-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; }
+.service-card .read-more {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.service-card .read-more i { transition: transform 0.2s; }
+.service-card:hover .read-more i { transform: translateX(5px); }
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.feature-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+.feature-item i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.feature-item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.feature-item p { color: var(--text-light); font-size: 0.95rem; }
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+.about-image img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.about-content h2 { margin-bottom: 1rem; }
+.about-content .highlight-box {
+  background: var(--bg-blue);
+  border-left: 4px solid var(--primary);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+.about-content .highlight-box strong { color: var(--primary); }
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+}
+.contact-info-card {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 2.5rem;
+  border-radius: 15px;
+}
+.contact-info-card h3 { color: #fff; margin-bottom: 1.5rem; }
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+.contact-item i {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-item h4 { color: #fff; font-size: 1rem; margin-bottom: 0.25rem; }
+.contact-item p, .contact-item a { color: rgba(255,255,255,0.9); font-size: 0.95rem; }
+.contact-form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.95rem; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.map-container {
+  margin-top: 3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.map-container iframe { width: 100%; height: 450px; display: block; border: 0; }
+
+/* Service Page */
+.service-hero {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.92), rgba(30, 58, 138, 0.88));
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+.service-hero h1 { color: #fff; font-size: 2.75rem; margin-bottom: 1rem; }
+.service-hero p { color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto; font-size: 1.15rem; }
+.breadcrumb {
+  background: var(--bg-light);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.breadcrumb a { color: var(--text-light); }
+.breadcrumb span { color: var(--primary); font-weight: 600; }
+.service-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+.service-main h2 { margin-top: 2rem; }
+.service-main h2:first-child { margin-top: 0; }
+.service-main ul, .service-main ol { margin: 1rem 0 1.5rem 1.5rem; }
+.service-main li { margin-bottom: 0.5rem; }
+.service-sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+.sidebar-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+.sidebar-card h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+.sidebar-card ul { list-style: none; }
+.sidebar-card li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-card li:last-child { border-bottom: none; }
+.sidebar-card li a { color: var(--text); font-weight: 500; display: flex; justify-content: space-between; align-items: center; }
+.sidebar-card li a:hover { color: var(--primary); }
+.sidebar-cta {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+.sidebar-cta h3 { color: #fff; margin-bottom: 0.75rem; }
+.sidebar-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+.sidebar-cta .phone {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta-banner h2 { color: #fff; margin-bottom: 1rem; }
+.cta-banner p { color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto 2rem; font-size: 1.15rem; }
+
+/* Footer */
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.footer-col h4 { color: #fff; margin-bottom: 1.25rem; font-size: 1.1rem; }
+.footer-col p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 0.75rem; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul li a { color: #94a3b8; font-size: 0.95rem; transition: color 0.2s; cursor: pointer; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-col .contact-line { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; align-items: flex-start; }
+.footer-col .contact-line i { color: var(--primary); margin-top: 0.25rem; }
+.social-links { display: flex; gap: 0.75rem; margin-top: 1.25rem; }
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s;
+}
+.social-links a:hover { background: var(--primary); transform: translateY(-3px); color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Page transitions */
+.page { display: none; animation: fadeIn 0.4s ease; }
+.page.active { display: block; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  .hero h1 { font-size: 2.5rem; }
+  .about-grid, .contact-grid, .service-content { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .menu-toggle { display: block; }
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    align-items: stretch;
+  }
+  nav ul.open { display: flex; }
+  nav ul li a { display: block; }
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding-left: 1rem;
+    display: none;
+  }
+  .dropdown.open .dropdown-menu { display: block; }
+  .service-sidebar { position: static; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero { padding: 4rem 0; }
+  .hero h1 { font-size: 2rem; }
+  section { padding: 3rem 0; }
+  .top-bar-inner { justify-content: center; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div>
+      <span class="info-item"><i class="fas fa-clock"></i> Mon–Sun: 8:30 AM – 6:30 PM</span>
+    </div>
+    <div>
+      <a href="tel:8084705555"><i class="fas fa-phone"></i> 808-470-5555</a>
+      <a href="mailto:Hello@niuhealth.com"><i class="fas fa-envelope"></i> Hello@niuhealth.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="nav-container">
+    <a class="logo" onclick="navigate('home')" style="cursor:pointer;">
+      <img src="https://honoluluurgentcare.com/wp-content/uploads/2025/05/Honolulu-Urgent-Care-LOGO.png" alt="Honolulu Urgent Care Clinic Logo">
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    <nav>
+      <ul id="navMenu">
+        <li><a onclick="navigate('home')" data-page="home">Home</a></li>
+        <li><a onclick="navigate('about')" data-page="about">About</a></li>
+        <li class="dropdown">
+          <a onclick="toggleDropdown(event)">Services <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a onclick="navigate('neck-pain')">Neck Pain</a></li>
+            <li><a onclick="navigate('pink-eye')">Pink Eye / Conjunctivitis</a></li>
+            <li><a onclick="navigate('pneumonia')">Pneumonia</a></li>
+            <li><a onclick="navigate('sore-throats')">Sore Throats</a></li>
+            <li><a onclick="navigate('skin-rashes')">Skin Rashes</a></li>
+            <li><a onclick="navigate('sprains-strains')">Sprains and Strains</a></li>
+            <li><a onclick="navigate('std-screening')">STD Screening</a></li>
+            <li><a onclick="navigate('tuberculosis')">Tuberculosis (TB)</a></li>
+            <li><a onclick="navigate('uti')">Urinary Tract Infections</a></li>
+          </ul>
+        </li>
+        <li><a onclick="navigate('contact')" data-page="contact">Contact</a></li>
+        <li><a href="tel:8084705555" class="cta-btn"><i class="fas fa-phone"></i> Call Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Quality Walk-In Urgent Care in Honolulu</h1>
+      <p>Honolulu Urgent Care Clinic provides fast, friendly, and affordable medical care for non-life-threatening illnesses and injuries. No appointment necessary — walk in today and be seen by a qualified healthcare professional.</p>
+      <div class="hero-buttons">
+        <a href="tel:8084705555" class="btn btn-primary"><i class="fas fa-phone"></i> Call 808-470-5555</a>
+        <a onclick="navigate('contact')" class="btn btn-outline" style="cursor:pointer;">Visit Our Clinic</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-clock"></i>
+          <h3>Open 7 Days a Week</h3>
+          <p>Walk in Monday through Sunday, 8:30 AM to 6:30 PM — no appointment needed.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-user-md"></i>
+          <h3>Expert Providers</h3>
+          <p>Board-certified physicians and experienced medical staff deliver compassionate care.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-hand-holding-medical"></i>
+          <h3>Comprehensive Care</h3>
+          <p>From minor injuries to illness treatment, STD screening, and TB testing — all under one roof.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Convenient Location</h3>
+          <p>Centrally located in Ala Moana, Honolulu — easy access from Waikiki and surrounding areas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Medical Services</h2>
+        <p>Honolulu Urgent Care Clinic offers a full range of urgent care services for patients of all ages. Click any service below to learn more.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800" alt="Honolulu Urgent Care Clinic Interior">
+        </div>
+        <div class="about-content">
+          <h2>Your Trusted Urgent Care Provider in Honolulu</h2>
+          <p>At <strong>Honolulu Urgent Care Clinic</strong>, we believe everyone deserves access to high-quality, affordable healthcare without the long wait times of an emergency room. Our modern clinic in the heart of Honolulu is staffed by experienced medical professionals dedicated to providing prompt, personalized treatment.</p>
+          <div class="highlight-box">
+            <strong>Why Choose Us?</strong> We combine the convenience of walk-in care with the quality and attention you'd expect from a top-tier medical practice. From <a onclick="navigate('sore-throats')" style="cursor:pointer;">sore throat treatment</a> to <a onclick="navigate('std-screening')" style="cursor:pointer;">confidential STD screening</a>, we've got you covered.
+          </div>
+          <a onclick="navigate('about')" class="btn btn-primary" style="cursor:pointer;">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Need Medical Attention Today?</h2>
+      <p>Walk in to Honolulu Urgent Care Clinic — no appointment necessary. Our friendly team is ready to help you feel better fast.</p>
+      <a href="tel:8084705555" class="btn btn-primary"><i class="fas fa-phone"></i> Call 808-470-5555</a>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="about" class="page">
+  <section class="service-hero">
+    <div class="container">
+      <h1>About Honolulu Urgent Care Clinic</h1>
+      <p>Compassionate, accessible, and high-quality urgent care for the Honolulu community.</p>
+    </div>
+  </section>
+  <div class="breadcrumb">
+    <div class="container">
+      <a onclick="navigate('home')" style="cursor:pointer;">Home</a> <i class="fas fa-chevron-right" style="margin:0 0.5rem;font-size:0.7rem;"></i> <span>About Us</span>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800" alt="About Honolulu Urgent Care">
+        </div>
+        <div class="about-content">
+          <h2>Who We Are</h2>
+          <p>Honolulu Urgent Care Clinic is a leading walk-in medical center located in the Ala Moana district of Honolulu, Hawaii. We are committed to providing fast, professional, and affordable healthcare to residents, visitors, and workers across Oahu.</p>
+          <p>Our clinic is equipped with state-of-the-art diagnostic tools and staffed by board-certified physicians, physician assistants, and nurse practitioners who bring years of clinical experience to every patient interaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Mission & Values</h2>
+        <p>We exist to make quality healthcare accessible, affordable, and convenient for every member of our community.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-heart"></i>
+          <h3>Compassionate Care</h3>
+          <p>Every patient is treated with dignity, respect, and genuine concern for their well-being.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-bolt"></i>
+          <h3>Fast Service</h3>
+          <p>Most patients are seen within minutes of arrival — no long waits, no appointments required.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-award"></i>
+          <h3>Clinical Excellence</h3>
+          <p>Our providers follow evidence-based protocols to deliver accurate diagnoses and effective treatments.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Transparent Pricing</h3>
+          <p>Affordable self-pay rates and most major insurance plans accepted — no surprise bills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Honolulu Urgent Care?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <p>When you're not feeling well, the last thing you want is to spend hours in an emergency room waiting for care — or to wait days for a primary care appointment. That's where we come in.</p>
+          <p>We offer a comprehensive range of urgent care services, including treatment for <a onclick="navigate('neck-pain')" style="cursor:pointer;">neck pain</a>, <a onclick="navigate('pink-eye')" style="cursor:pointer;">pink eye and conjunctivitis</a>, <a onclick="navigate('pneumonia')" style="cursor:pointer;">pneumonia</a>, <a onclick="navigate('skin-rashes')" style="cursor:pointer;">skin rashes</a>, <a onclick="navigate('sprains-strains')" style="cursor:pointer;">sprains and strains</a>, and <a onclick="navigate('uti')" style="cursor:pointer;">urinary tract infections</a>.</p>
+          <p>We also provide specialized services such as <a onclick="navigate('std-screening')" style="cursor:pointer;">confidential STD screening</a> and <a onclick="navigate('tuberculosis')" style="cursor:pointer;">tuberculosis (TB) testing</a>, making us a one-stop destination for your urgent healthcare needs.</p>
+          <div class="highlight-box">
+            <strong>Open 7 Days a Week:</strong> Monday through Sunday, 8:30 AM to 6:30 PM — including holidays. Walk in anytime.
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1631217868265-e6bdc1c3f3f5?w=800" alt="Medical Team Honolulu Urgent Care">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Experience Better Care?</h2>
+      <p>Visit Honolulu Urgent Care Clinic today — or call us to learn more about our services.</p>
+      <a href="tel:8084705555" class="btn btn-primary"><i class="fas fa-phone"></i> 808-470-5555</a>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="page">
+  <section class="service-hero">
+    <div class="container">
+      <h1>Contact Honolulu Urgent Care Clinic</h1>
+      <p>We're here to help. Walk in, call, or send us a message — our team is ready to assist you.</p>
+    </div>
+  </section>
+  <div class="breadcrumb">
+    <div class="container">
+      <a onclick="navigate('home')" style="cursor:pointer;">Home</a> <i class="fas fa-chevron-right" style="margin:0 0.5rem;font-size:0.7rem;"></i> <span>Contact Us</span>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Our Location</h4>
+              <p>1441 Kapiolani Boulevard, Suite 713<br>Ala Moana Building<br>Honolulu, HI 96814</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:8084705555">808-470-5555</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:Hello@niuhealth.com">Hello@niuhealth.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday – Sunday<br>8:30 AM – 6:30 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <p style="color:var(--text-light);margin-bottom:1.5rem;">Have a question? Fill out the form below and we'll get back to you as soon as possible.</p>
+          <form onsubmit="submitForm(event)">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(808) 000-0000">
+            </div>
+            <div class="form-group">
+              <label>Service Interested In</label>
+              <select>
+                <option>General Inquiry</option>
+                <option>Neck Pain Treatment</option>
+                <option>Pink Eye / Conjunctivitis</option>
+                <option>Pneumonia</option>
+                <option>Sore Throats</option>
+                <option>Skin Rashes</option>
+                <option>Sprains and Strains</option>
+                <option>STD Screening</option>
+                <option>Tuberculosis (TB) Testing</option>
+                <option>Urinary Tract Infections (UTI)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea required placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4409.028016542203!2d-157.8552736!3d21.313336000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006d303cea8935%3A0x6d23aaedc1795848!2sHonolulu%20Urgent%20Care%20Clinic%20-%20NIU%20Health!5e1!3m2!1sen!2sus!4v1758815374710!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SERVICE PAGES CONTAINER -->
+<div id="service-page" class="page"></div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="https://honoluluurgentcare.com/wp-content/uploads/2025/05/Honolulu-Urgent-Care-LOGO.png" alt="Honolulu Urgent Care Clinic" style="height:60px;margin-bottom:1rem;filter:brightness(0) invert(1);">
+        <p>Honolulu Urgent Care Clinic provides fast, friendly, and affordable walk-in medical care in the heart of Honolulu, Hawaii. Open 7 days a week.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/NIUHEALTH/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/niuhealthcare/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/niuhealth/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@niuhealth714" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@niuhealthhawaii" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a onclick="navigate('home')">Home</a></li>
+          <li><a onclick="navigate('about')">About Us</a></li>
+          <li><a onclick="navigate('contact')">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a onclick="navigate('neck-pain')">Neck Pain</a></li>
+          <li><a onclick="navigate('pink-eye')">Pink Eye</a></li>
+          <li><a onclick="navigate('pneumonia')">Pneumonia</a></li>
+          <li><a onclick="navigate('sore-throats')">Sore Throats</a></li>
+          <li><a onclick="navigate('skin-rashes')">Skin Rashes</a></li>
+          <li><a onclick="navigate('sprains-strains')">Sprains & Strains</a></li>
+          <li><a onclick="navigate('std-screening')">STD Screening</a></li>
+          <li><a onclick="navigate('tuberculosis')">Tuberculosis (TB)</a></li>
+          <li><a onclick="navigate('uti')">Urinary Tract Infections</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="contact-line"><i class="fas fa-map-marker-alt"></i><span>1441 Kapiolani Blvd, Suite 713, Honolulu, HI 96814</span></div>
+        <div class="contact-line"><i class="fas fa-phone"></i><a href="tel:8084705555" style="color:#94a3b8;">808-470-5555</a></div>
+        <div class="contact-line"><i class="fas fa-envelope"></i><a href="mailto:Hello@niuhealth.com" style="color:#94a3b8;">Hello@niuhealth.com</a></div>
+        <div class="contact-line"><i class="fas fa-clock"></i><span>Mon–Sun: 8:30 AM – 6:30 PM</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Honolulu Urgent Care Clinic. All Rights Reserved. | 1441 Kapiolani Boulevard, Suite 713, Honolulu, HI 96814
+    </div>
+  </div>
+</footer>
+
+<script>
+// Service data
+const services = [
+  {
+    id: 'neck-pain',
+    title: 'Neck Pain',
+    icon: 'fa-user-injured',
+    short: 'Expert diagnosis and treatment for acute and chronic neck pain, including muscle strain, whiplash, and nerve-related discomfort.',
+    externalUrl: 'https://honoluluurgentcare.com/neck-pain-treatment/',
+    heroDesc: 'Fast, effective relief for neck pain caused by strain, injury, poor posture, or underlying medical conditions.',
+    content: `
+      <h2>Comprehensive Neck Pain Treatment in Honolulu</h2>
+      <p>Neck pain is one of the most common musculoskeletal complaints we treat at Honolulu Urgent Care Clinic. Whether your discomfort is the result of a recent injury, hours spent hunched over a computer, or an underlying medical condition, our experienced providers can help you find relief quickly.</p>
+      <p>Our clinic offers same-day walk-in appointments for patients experiencing neck pain of any severity. We perform a thorough evaluation — including a physical exam and, when necessary, imaging referrals — to identify the root cause of your pain and develop a personalized treatment plan.</p>
+
+      <h2>Common Causes of Neck Pain</h2>
+      <ul>
+        <li><strong>Muscle strain and tension</strong> from poor posture, stress, or overuse</li>
+        <li><strong>Whiplash</strong> and other injuries from car accidents or sports</li>
+        <li><strong>Cervical sprains</strong> affecting the ligaments of the neck</li>
+        <li><strong>Herniated discs</strong> or pinched nerves in the cervical spine</li>
+        <li><strong>Degenerative conditions</strong> such as cervical spondylosis or arthritis</li>
+        <li><strong>Torticollis</strong> (wry neck) and muscle spasms</li>
+      </ul>
+
+      <h2>Symptoms That Warrant a Visit</h2>
+      <p>You should seek medical evaluation if your neck pain is accompanied by any of the following:</p>
+      <ul>
+        <li>Persistent stiffness or limited range of motion</li>
+        <li>Pain radiating into the shoulders, arms, or hands</li>
+        <li>Numbness, tingling, or weakness in the arms</li>
+        <li>Headaches originating from the base of the skull</li>
+        <li>Pain following a fall, accident, or sports injury</li>
+        <li>Fever or unexplained weight loss with neck pain</li>
+      </ul>
+
+      <h2>Our Neck Pain Treatment Approach</h2>
+      <p>At Honolulu Urgent Care Clinic, we take a comprehensive approach to treating neck pain. After a detailed evaluation, treatment may include:</p>
+      <ul>
+        <li>Prescription-strength anti-inflammatory medications and muscle relaxants</li>
+        <li>Targeted physical therapy referrals and home exercise guidance</li>
+        <li>Soft cervical collars for short-term immobilization</li>
+        <li>Hot/cold therapy recommendations</li>
+        <li>Imaging referrals (X-ray, MRI) when indicated</li>
+        <li>Specialist referrals for persistent or complex cases</li>
+      </ul>
+
+      <h2>Walk-In Neck Pain Care — No Appointment Needed</h2>
+      <p>Don't live with neck pain another day. Visit Honolulu Urgent Care Clinic at 1441 Kapiolani Boulevard, Suite 713, Honolulu, HI 96814. We're open Monday through Sunday, 8:30 AM to 6:30 PM. For more information about our <a href="https://honoluluurgentcare.com/neck-pain-treatment/" target="_blank" rel="noopener">professional neck pain treatment services</a>, call us at <a href="tel:8084705555">808-470-5555</a>.</p>
+    `
+  },
+  {
+    id: 'pink-eye',
+    title: 'Pink Eye / Conjunctivitis',
+    icon: 'fa-eye',
+    short: 'Accurate diagnosis and treatment of pink eye (conjunctivitis), whether viral, bacterial, or allergic in origin.',
+    externalUrl: 'https://honoluluurgentcare.com/pink-eye-conjunctivitis-treatment/',
+    heroDesc: 'Fast diagnosis and effective treatment for pink eye — get back to work, school, and daily life quickly.',
+    content: `
+      <h2>Pink Eye (Conjunctivitis) Treatment in Honolulu</h2>
+      <p>Pink eye, medically known as conjunctivitis, is a highly contagious inflammation of the conjunctiva — the thin, transparent layer that lines the inside of the eyelid and covers the white of the eye. It's one of the most common eye conditions we treat at Honolulu Urgent Care Clinic, especially among children and young adults.</p>
+      <p>Because pink eye can be caused by viruses, bacteria, or allergens, proper diagnosis is essential to determine the right treatment. Our providers will carefully examine your eyes, review your symptoms, and prescribe the most effective therapy to speed recovery and prevent spreading the infection to others.</p>
+
+      <h2>Types of Conjunctivitis We Treat</h2>
+      <ul>
+        <li><strong>Viral conjunctivitis</strong> — often associated with the common cold; highly contagious</li>
+        <li><strong>Bacterial conjunctivitis</strong> — typically produces a thick, yellow-green discharge</li>
+        <li><strong>Allergic conjunctivitis</strong> — triggered by pollen, dust, pet dander, or other allergens</li>
+        <li><strong>Irritant conjunctivitis</strong> — caused by chlorine, smoke, or chemical exposure</li>
+      </ul>
+
+      <h2>Recognizing the Symptoms</h2>
+      <p>Common signs of pink eye include:</p>
+      <ul>
+        <li>Redness in one or both eyes</li>
+        <li>Itchy or gritty sensation</li>
+        <li>Discharge that may crust overnight</li>
+        <li>Excessive tearing</li>
+        <li>Sensitivity to light</li>
+        <li>Swollen eyelids</li>
+      </ul>
+
+      <h2>Our Treatment Approach</h2>
+      <p>Treatment depends on the underlying cause:</p>
+      <ul>
+        <li><strong>Bacterial pink eye:</strong> prescription antibiotic eye drops or ointment</li>
+        <li><strong>Viral pink eye:</strong> supportive care, cold compresses, and time</li>
+        <li><strong>Allergic pink eye:</strong> antihistamine drops and allergen avoidance strategies</li>
+        <li><strong>Irritant pink eye:</strong> flushing the eye and removing the irritant source</li>
+      </ul>
+      <p>We also provide guidance on preventing the spread of conjunctivitis to family members and coworkers — including proper hand hygiene, avoiding shared towels, and when it's safe to return to school or work.</p>
+
+      <h2>Same-Day Pink Eye Care</h2>
+      <p>Walk in to Honolulu Urgent Care Clinic for fast, affordable pink eye treatment. Learn more about our <a href="https://honoluluurgentcare.com/pink-eye-conjunctivitis-treatment/" target="_blank" rel="noopener">comprehensive conjunctivitis treatment</a> by calling <a href="tel:8084705555">808-470-5555</a>. We're located at 1441 Kapiolani Boulevard, Suite 713, Honolulu, HI 96814, and open daily from 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'pneumonia',
+    title: 'Pneumonia',
+    icon: 'fa-lungs',
+    short: 'Prompt evaluation and treatment of pneumonia, including chest X-rays, antibiotics, and breathing support.',
+    externalUrl: 'https://honoluluurgentcare.com/pneumonia-treatment/',
+    heroDesc: 'Early diagnosis and effective treatment of pneumonia to help you breathe easier and recover faster.',
+    content: `
+      <h2>Pneumonia Diagnosis and Treatment in Honolulu</h2>
+      <p>Pneumonia is a serious lung infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus, causing cough, fever, chills, and difficulty breathing. At Honolulu Urgent Care Clinic, we provide prompt evaluation and treatment for mild to moderate cases of pneumonia — helping you recover quickly and avoid complications.</p>
+      <p>Early treatment is critical. If you're experiencing a persistent cough, fever, chest pain, or shortness of breath, walk in today for a same-day evaluation.</p>
+
+      <h2>Types of Pneumonia</h2>
+      <ul>
+        <li><strong>Bacterial pneumonia</strong> — often caused by Streptococcus pneumoniae; typically requires antibiotics</li>
+        <li><strong>Viral pneumonia</strong> — caused by influenza, RSV, or other viruses</li>
+        <li><strong>Walking pneumonia</strong> — a milder form often caused by Mycoplasma bacteria</li>
+        <li><strong>Aspiration pneumonia</strong> — caused by inhaling food, liquid, or vomit into the lungs</li>
+      </ul>
+
+      <h2>Common Symptoms</h2>
+      <ul>
+        <li>Persistent cough, often with phlegm</li>
+        <li>Fever, sweating, and shaking chills</li>
+        <li>Shortness of breath, even with mild activity</li>
+        <li>Chest pain that worsens when breathing deeply or coughing</li>
+        <li>Fatigue, loss of appetite, and body aches</li>
+        <li>In older adults: confusion or lower-than-normal body temperature</li>
+      </ul>
+
+      <h2>How We Diagnose and Treat Pneumonia</h2>
+      <p>Our providers begin with a thorough physical exam, listening carefully to your lungs. Depending on your symptoms, we may order:</p>
+      <ul>
+        <li>Chest X-ray to confirm the presence and extent of infection</li>
+        <li>Pulse oximetry to measure oxygen levels</li>
+        <li>Blood tests or sputum cultures to identify the cause</li>
+        <li>Rapid flu or COVID-19 testing when appropriate</li>
+      </ul>
+      <p>Treatment may include prescription antibiotics (for bacterial pneumonia), antiviral medications, inhalers, cough suppressants, and hydration therapy. For severe cases, we'll arrange a prompt referral to the hospital.</p>
+
+      <h2>Get Treated Today</h2>
+      <p>Don't wait for pneumonia to worsen. Visit Honolulu Urgent Care Clinic for same-day evaluation. Learn more about our <a href="https://honoluluurgentcare.com/pneumonia-treatment/" target="_blank" rel="noopener">pneumonia treatment services</a> by calling <a href="tel:8084705555">808-470-5555</a>. Open 7 days a week, 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'sore-throats',
+    title: 'Sore Throats',
+    icon: 'fa-head-side-cough',
+    short: 'Fast relief for sore throats, including rapid strep testing and treatment for viral and bacterial causes.',
+    externalUrl: 'https://honoluluurgentcare.com/sore-throats-treatment/',
+    heroDesc: 'Quick diagnosis and relief for sore throats — including on-site strep testing and personalized treatment.',
+    content: `
+      <h2>Sore Throat Treatment in Honolulu</h2>
+      <p>A sore throat can make swallowing, speaking, and even breathing uncomfortable. At Honolulu Urgent Care Clinic, we provide fast, accurate diagnosis and effective treatment for sore throats of all causes — from the common cold to strep throat and beyond.</p>
+      <p>Because sore throats can be caused by viruses, bacteria, allergies, or environmental irritants, proper diagnosis is essential. Our providers use rapid in-office testing to determine the cause and recommend the most effective treatment.</p>
+
+      <h2>Common Causes of Sore Throat</h2>
+      <ul>
+        <li><strong>Viral infections</strong> — including the common cold, flu, and mono</li>
+        <li><strong>Strep throat</strong> — a bacterial infection caused by Group A Streptococcus</li>
+        <li><strong>Tonsillitis</strong> — inflammation of the tonsils</li>
+        <li><strong>Allergies</strong> — to pollen, dust, pet dander, or mold</li>
+        <li><strong>Acid reflux (GERD)</strong> — stomach acid irritating the throat</li>
+        <li><strong>Dry air or irritants</strong> — smoke, pollution, or overuse of the voice</li>
+      </ul>
+
+      <h2>When to See a Doctor</h2>
+      <p>Seek medical care if your sore throat:</p>
+      <ul>
+        <li>Lasts longer than a week</li>
+        <li>Is accompanied by high fever, rash, or joint pain</li>
+        <li>Makes swallowing or breathing difficult</li>
+        <li>Includes swollen lymph nodes or white patches on the tonsils</li>
+        <li>Is severe or recurrent</li>
+      </ul>
+
+      <h2>Our Diagnostic and Treatment Services</h2>
+      <p>At Honolulu Urgent Care Clinic, we offer:</p>
+      <ul>
+        <li>Rapid strep testing with results in minutes</li>
+        <li>Throat cultures when needed</li>
+        <li>Monospot tests for mono</li>
+        <li>Prescription antibiotics for bacterial infections</li>
+        <li>Supportive care recommendations for viral sore throats</li>
+        <li>Referrals to ENT specialists for chronic or recurrent cases</li>
+      </ul>
+
+      <h2>Walk In for Fast Relief</h2>
+      <p>Don't suffer through a sore throat. Visit Honolulu Urgent Care Clinic for same-day care. Learn more about our <a href="https://honoluluurgentcare.com/sore-throats-treatment/" target="_blank" rel="noopener">sore throat treatment services</a> by calling <a href="tel:8084705555">808-470-5555</a>. We're open Monday through Sunday, 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'skin-rashes',
+    title: 'Skin Rashes',
+    icon: 'fa-hand-dots',
+    short: 'Accurate diagnosis and treatment for all types of skin rashes, including allergic reactions, infections, and eczema.',
+    externalUrl: 'https://honoluluurgentcare.com/skin-rashes-treatment/',
+    heroDesc: 'Expert evaluation and treatment for skin rashes — from allergic reactions to infections and chronic conditions.',
+    content: `
+      <h2>Skin Rash Diagnosis and Treatment in Honolulu</h2>
+      <p>Skin rashes can be itchy, painful, embarrassing, and sometimes a sign of a more serious underlying condition. At Honolulu Urgent Care Clinic, our providers are experienced in diagnosing and treating a wide variety of skin rashes — from mild allergic reactions to infectious conditions that require prescription treatment.</p>
+      <p>Because rashes can have many different causes, a proper medical evaluation is essential. We'll examine the appearance, location, and pattern of your rash, review your medical history, and recommend the most effective treatment.</p>
+
+      <h2>Common Types of Skin Rashes</h2>
+      <ul>
+        <li><strong>Contact dermatitis</strong> — caused by contact with irritants or allergens (poison ivy, nickel, soaps)</li>
+        <li><strong>Eczema (atopic dermatitis)</strong> — chronic, itchy, inflamed skin</li>
+        <li><strong>Hives (urticaria)</strong> — raised, itchy welts often caused by allergies</li>
+        <li><strong>Fungal infections</strong> — including ringworm, athlete's foot, and yeast infections</li>
+        <li><strong>Bacterial infections</strong> — such as impetigo or cellulitis</li>
+        <li><strong>Viral rashes</strong> — including shingles, chickenpox, and viral exanthems</li>
+        <li><strong>Heat rash</strong> — common in Hawaii's warm, humid climate</li>
+      </ul>
+
+      <h2>When to Seek Medical Care</h2>
+      <p>You should see a healthcare provider if your rash:</p>
+      <ul>
+        <li>Covers a large area of the body</li>
+        <li>Is accompanied by fever</li>
+        <li>Is painful, blistering, or spreading rapidly</li>
+        <li>Shows signs of infection (pus, warmth, red streaks)</li>
+        <li>Doesn't improve after a few days of home care</li>
+        <li>Occurs after starting a new medication</li>
+      </ul>
+
+      <h2>Our Treatment Approach</h2>
+      <p>After diagnosis, treatment may include:</p>
+      <ul>
+        <li>Topical corticosteroids and moisturizers</li>
+        <li>Oral antihistamines for allergic reactions</li>
+        <li>Antifungal or antibacterial medications</li>
+        <li>Antiviral therapy for shingles or other viral rashes</li>
+        <li>Skin care guidance and trigger avoidance strategies</li>
+        <li>Dermatology referrals for complex or persistent cases</li>
+      </ul>
+
+      <h2>Get Expert Rash Care Today</h2>
+      <p>Walk in to Honolulu Urgent Care Clinic for prompt skin rash evaluation. Learn more about our <a href="https://honoluluurgentcare.com/skin-rashes-treatment/" target="_blank" rel="noopener">skin rash treatment services</a> by calling <a href="tel:8084705555">808-470-5555</a>. Open daily from 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'sprains-strains',
+    title: 'Sprains and Strains',
+    icon: 'fa-person-walking',
+    short: 'Comprehensive care for sprains, strains, and other soft-tissue injuries — including evaluation, treatment, and recovery plans.',
+    externalUrl: 'https://honoluluurgentcare.com/sprains-and-strains/',
+    heroDesc: 'Fast, expert treatment for sprains, strains, and sports injuries — get back on your feet quickly.',
+    content: `
+      <h2>Sprain and Strain Treatment in Honolulu</h2>
+      <p>Sprains and strains are among the most common injuries we treat at Honolulu Urgent Care Clinic. Whether you've twisted an ankle playing sports, strained your back lifting something heavy, or injured a wrist in a fall, our providers can evaluate your injury, rule out fractures, and create a treatment plan to help you heal quickly.</p>
+      <p>While sprains affect ligaments (the bands of tissue connecting bones) and strains affect muscles or tendons, both can cause significant pain, swelling, and limited mobility. Proper diagnosis and treatment are essential to prevent long-term complications.</p>
+
+      <h2>Understanding Sprains and Strains</h2>
+      <p><strong>Sprains</strong> occur when ligaments are stretched or torn. Common sprains include:</p>
+      <ul>
+        <li>Ankle sprains</li>
+        <li>Wrist sprains</li>
+        <li>Thumb sprains</li>
+        <li>Knee sprains (including ACL/MCL injuries)</li>
+      </ul>
+      <p><strong>Strains</strong> occur when muscles or tendons are overstretched or torn. Common strains include:</p>
+      <ul>
+        <li>Lower back strains</li>
+        <li>Hamstring strains</li>
+        <li>Groin strains</li>
+        <li>Shoulder and neck strains</li>
+      </ul>
+
+      <h2>Symptoms to Watch For</h2>
+      <ul>
+        <li>Pain, swelling, and bruising around the injured area</li>
+        <li>Limited range of motion or difficulty bearing weight</li>
+        <li>A "popping" sensation at the time of injury</li>
+        <li>Muscle spasms or weakness</li>
+        <li>Visible deformity (which may indicate a fracture)</li>
+      </ul>
+
+      <h2>Our Diagnostic and Treatment Services</h2>
+      <p>At Honolulu Urgent Care Clinic, we provide:</p>
+      <ul>
+        <li>Comprehensive physical examination</li>
+        <li>On-site X-rays to rule out fractures</li>
+        <li>RICE protocol guidance (Rest, Ice, Compression, Elevation)</li>
+        <li>Braces, splints, crutches, and slings as needed</li>
+        <li>Prescription pain relief and anti-inflammatory medications</li>
+        <li>Physical therapy referrals for rehabilitation</li>
+        <li>Orthopedic referrals for severe injuries</li>
+      </ul>
+
+      <h2>Same-Day Injury Care</h2>
+      <p>Don't ignore a sprain or strain — early treatment leads to faster recovery. Visit Honolulu Urgent Care Clinic for prompt care. Learn more about our <a href="https://honoluluurgentcare.com/sprains-and-strains/" target="_blank" rel="noopener">sprains and strains treatment</a> by calling <a href="tel:8084705555">808-470-5555</a>. Open 7 days a week, 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'std-screening',
+    title: 'STD Screening',
+    icon: 'fa-shield-virus',
+    short: 'Confidential, accurate STD screening and treatment in a private, judgment-free environment.',
+    externalUrl: 'https://honoluluurgentcare.com/std-screening/',
+    heroDesc: 'Confidential, accurate STD screening and treatment — because your health and privacy matter.',
+    content: `
+      <h2>Confidential STD Screening in Honolulu</h2>
+      <p>Sexually transmitted diseases (STDs) are more common than many people realize — and early detection is the key to effective treatment and preventing long-term complications. At Honolulu Urgent Care Clinic, we provide confidential, compassionate, and accurate STD screening in a private, judgment-free environment.</p>
+      <p>Our providers offer comprehensive testing for a wide range of sexually transmitted infections, with fast results and discreet, professional care. Whether you're experiencing symptoms, have had a new partner, or simply want peace of mind, we're here to help.</p>
+
+      <h2>STDs We Screen For</h2>
+      <ul>
+        <li><strong>Chlamydia</strong> — one of the most common bacterial STDs; often asymptomatic</li>
+        <li><strong>Gonorrhea</strong> — a bacterial infection that can affect the genitals, rectum, and throat</li>
+        <li><strong>Syphilis</strong> — a bacterial infection that progresses in stages if untreated</li>
+        <li><strong>HIV</strong> — rapid testing available with confidential counseling</li>
+        <li><strong>Herpes (HSV-1 and HSV-2)</strong> — viral infection causing oral or genital sores</li>
+        <li><strong>Trichomoniasis</strong> — a common parasitic infection</li>
+        <li><strong>Hepatitis B and C</strong> — viral infections affecting the liver</li>
+        <li><strong>HPV (Human Papillomavirus)</strong> — evaluation and counseling available</li>
+      </ul>
+
+      <h2>When Should You Get Tested?</h2>
+      <p>We recommend STD screening if you:</p>
+      <ul>
+        <li>Have had unprotected sex with a new or multiple partners</li>
+        <li>Are experiencing symptoms such as unusual discharge, burning during urination, sores, or rashes</li>
+        <li>Have been notified by a partner that they have an STD</li>
+        <li>Are starting a new relationship</li>
+        <li>Are pregnant or planning to become pregnant</li>
+        <li>Routinely want to maintain your sexual health</li>
+      </ul>
+
+      <h2>Our Confidential Testing Process</h2>
+      <p>At Honolulu Urgent Care Clinic, your privacy is our priority. Our STD screening process includes:</p>
+      <ul>
+        <li>A confidential consultation with a qualified healthcare provider</li>
+        <li>Simple urine, blood, or swab tests — quick and minimally invasive</li>
+        <li>Fast, accurate lab results</li>
+        <li>Discreet notification of results</li>
+        <li>Effective treatment when needed, including prescription medications</li>
+        <li>Partner notification guidance and prevention counseling</li>
+      </ul>
+
+      <h2>Walk In With Confidence</h2>
+      <p>Your health and privacy matter. Visit Honolulu Urgent Care Clinic for confidential STD screening. Learn more about our <a href="https://honoluluurgentcare.com/std-screening/" target="_blank" rel="noopener">STD screening services</a> by calling <a href="tel:8084705555">808-470-5555</a>. We're open Monday through Sunday, 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'tuberculosis',
+    title: 'Tuberculosis (TB)',
+    icon: 'fa-virus',
+    short: 'TB testing, screening, and treatment for employment, school, immigration, and exposure concerns.',
+    externalUrl: 'https://honoluluurgentcare.com/tuberculosis/',
+    heroDesc: 'Fast, reliable TB testing for employment, school, immigration, and personal health needs.',
+    content: `
+      <h2>Tuberculosis (TB) Testing in Honolulu</h2>
+      <p>Tuberculosis (TB) is a serious infectious disease caused by the bacterium <em>Mycobacterium tuberculosis</em>. While TB rates in the United States are relatively low, testing is commonly required for employment, school admission, immigration, and healthcare positions — as well as for individuals who may have been exposed.</p>
+      <p>At Honolulu Urgent Care Clinic, we provide fast, reliable TB testing with same-day walk-in service. Our experienced staff will help you complete your testing requirements quickly and accurately.</p>
+
+      <h2>Types of TB Tests We Offer</h2>
+      <ul>
+        <li><strong>Tuberculin Skin Test (TST / PPD)</strong> — the traditional two-visit TB test requiring a return in 48–72 hours for reading</li>
+        <li><strong>IGRA Blood Test (QuantiFERON-TB Gold)</strong> — a one-visit blood test that doesn't require a return appointment</li>
+        <li><strong>Chest X-ray</strong> — ordered when a test is positive or when required by employers/agencies</li>
+        <li><strong>Medical evaluation</strong> — for individuals with symptoms or known exposure</li>
+      </ul>
+
+      <h2>Who Needs TB Testing?</h2>
+      <p>TB testing is commonly required for:</p>
+      <ul>
+        <li>Healthcare workers and hospital staff</li>
+        <li>Teachers, school employees, and students in certain programs</li>
+        <li>Immigration and visa applicants</li>
+        <li>Volunteers and interns in healthcare or social service settings</li>
+        <li>Individuals with known exposure to someone with active TB</li>
+        <li>People experiencing symptoms such as chronic cough, fever, night sweats, or unexplained weight loss</li>
+      </ul>
+
+      <h2>Understanding TB: Latent vs. Active</h2>
+      <p><strong>Latent TB infection (LTBI)</strong> means the bacteria are present in the body but inactive — you're not sick and can't spread it to others. <strong>Active TB disease</strong> means the bacteria are multiplying and making you sick — it can be contagious, especially when affecting the lungs.</p>
+      <p>Our providers will explain your results clearly and recommend appropriate next steps, including treatment for latent TB or referral for active TB management.</p>
+
+      <h2>Quick, Convenient TB Testing</h2>
+      <p>Walk in to Honolulu Urgent Care Clinic for fast TB testing. Learn more about our <a href="https://honoluluurgentcare.com/tuberculosis/" target="_blank" rel="noopener">tuberculosis testing services</a> by calling <a href="tel:8084705555">808-470-5555</a>. We're located at 1441 Kapiolani Boulevard, Suite 713, Honolulu, HI 96814, and open daily from 8:30 AM to 6:30 PM.</p>
+    `
+  },
+  {
+    id: 'uti',
+    title: 'Urinary Tract Infections (UTI)',
+    icon: 'fa-flask',
+    short: 'Fast diagnosis and effective treatment for urinary tract infections, including same-day urine testing and antibiotics.',
+    externalUrl: 'https://honoluluurgentcare.com/urinary-tract-infections-uti/',
+    heroDesc: 'Quick relief from UTI symptoms — same-day testing, accurate diagnosis, and effective treatment.',
+    content: `
+      <h2>UTI Diagnosis and Treatment in Honolulu</h2>
+      <p>Urinary tract infections (UTIs) are among the most common bacterial infections we treat at Honolulu Urgent Care Clinic — especially among women. A UTI occurs when bacteria enter the urinary tract, causing infection in the bladder, urethra, or kidneys. Left untreated, UTIs can lead to more serious complications, so prompt treatment is essential.</p>
+      <p>If you're experiencing burning during urination, frequent urges to urinate, or pelvic discomfort, walk in today for same-day testing and treatment.</p>
+
+      <h2>Types of Urinary Tract Infections</h2>
+      <ul>
+        <li><strong>Cystitis</strong> — bladder infection; the most common type of UTI</li>
+        <li><strong>Urethritis</strong> — infection of the urethra</li>
+        <li><strong>Pyelonephritis</strong> — kidney infection; more serious and requires prompt treatment</li>
+      </ul>
+
+      <h2>Common UTI Symptoms</h2>
+      <ul>
+        <li>Burning or pain during urination</li>
+        <li>Frequent or urgent need to urinate</li>
+        <li>Cloudy, dark, or strong-smelling urine</li>
+        <li>Blood in the urine</li>
+        <li>Pelvic pain (in women) or rectal pain (in men)</li>
+        <li>Lower abdominal discomfort</li>
+        <li>Fever, chills, or back pain (may indicate kidney infection)</li>
+      </ul>
+
+      <h2>Who Is at Risk?</h2>
+      <p>While UTIs can affect anyone, certain factors increase risk:</p>
+      <ul>
+        <li>Female anatomy (shorter urethra)</li>
+        <li>Sexual activity</li>
+        <li>Certain types of birth control</li>
+        <li>Menopause</li>
+        <li>Urinary tract abnormalities or blockages</li>
+        <li>Weakened immune system</li>
+        <li>Catheter use</li>
+      </ul>
+
+      <h2>Our Diagnostic and Treatment Approach</h2>
+      <p>At Honolulu Urgent Care Clinic, we offer:</p>
+      <ul>
+        <li>Same-day urinalysis and urine culture testing</li>
+        <li>Rapid diagnosis with results often available during your visit</li>
+        <li>Prescription antibiotics targeted to the specific bacteria</li>
+        <li>Pain relief recommendations</li>
+        <li>Hydration and prevention guidance</li>
+        <li>Follow-up care for recurrent UTIs</li>
+      </ul>
+
+      <h2>Get UTI Relief Today</h2>
+      <p>Don't suffer through UTI symptoms. Visit Honolulu Urgent Care Clinic for fast, effective treatment. Learn more about our <a href="https://honoluluurgentcare.com/urinary-tract-infections-uti/" target="_blank" rel="noopener">urinary tract infection treatment services</a> by calling <a href="tel:8084705555">808-470-5555</a>. Open 7 days a week, 8:30 AM to 6:30 PM.</p>
+    `
+  }
+];
+
+// Render services grid on home page
+function renderServicesGrid() {
+  const grid = document.getElementById('servicesGrid');
+  grid.innerHTML = services.map(s => `
+    <div class="service-card" onclick="navigate('${s.id}')">
+      <div class="service-icon"><i class="fas ${s.icon}"></i></div>
+      <h3>${s.title}</h3>
+      <p>${s.short}</p>
+      <span class="read-more">Learn More <i class="fas fa-arrow-right"></i></span>
+    </div>
+  `).join('');
+}
+
+// Render service page
+function renderServicePage(id) {
+  const s = services.find(x => x.id === id);
+  if (!s) return;
+  const relatedServices = services.filter(x => x.id !== id).slice(0, 6);
+  const container = document.getElementById('service-page');
+  container.innerHTML = `
+    <section class="service-hero">
+      <div class="container">
+        <h1>${s.title} Treatment in Honolulu</h1>
+        <p>${s.heroDesc}</p>
+      </div>
+    </section>
+    <div class="breadcrumb">
+      <div class="container">
+        <a onclick="navigate('home')" style="cursor:pointer;">Home</a>
+        <i class="fas fa-chevron-right" style="margin:0 0.5rem;font-size:0.7rem;"></i>
+        <a onclick="navigate('home')" style="cursor:pointer;">Services</a>
+        <i class="fas fa-chevron-right" style="margin:0 0.5rem;font-size:0.7rem;"></i>
+        <span>${s.title}</span>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="service-content">
+          <div class="service-main">
+            ${s.content}
+          </div>
+          <aside class="service-sidebar">
+            <div class="sidebar-cta">
+              <h3>Need Help Now?</h3>
+              <p>Walk in today — no appointment necessary.</p>
+              <a href="tel:8084705555" class="phone">808-470-5555</a>
+              <a onclick="navigate('contact')" class="btn btn-primary" style="background:#fff;color:var(--secondary);cursor:pointer;">Get Directions</a>
+            </div>
+            <div class="sidebar-card">
+              <h3>All Services</h3>
+              <ul>
+                ${relatedServices.map(r => `
+                  <li><a onclick="navigate('${r.id}')" style="cursor:pointer;">${r.title} <i class="fas fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
+                `).join('')}
+              </ul>
+            </div>
+            <div class="sidebar-card">
+              <h3>Clinic Hours</h3>
+              <p style="margin-bottom:0.5rem;"><strong>Monday – Sunday</strong></p>
+              <p style="margin-bottom:1rem;">8:30 AM – 6:30 PM</p>
+              <p style="font-size:0.9rem;color:var(--text-light);">1441 Kapiolani Blvd, Suite 713<br>Honolulu, HI 96814</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Ready to Get Treated?</h2>
+        <p>Walk in to Honolulu Urgent Care Clinic today — or call us to learn more about our ${s.title.toLowerCase()} treatment.</p>
+        <a href="tel:8084705555" class="btn btn-primary"><i class="fas fa-phone"></i> 808-470-5555</a>
+      </div>
+    </section>
+  `;
+}
+
+// Navigation
+function navigate(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
+
+  const service = services.find(s => s.id === pageId);
+  if (service) {
+    renderServicePage(pageId);
+    document.getElementById('service-page').classList.add('active');
+  } else {
+    const el = document.getElementById(pageId);
+    if (el) el.classList.add('active');
+    const navLink = document.querySelector(`nav ul li a[data-page="${pageId}"]`);
+    if (navLink) navLink.classList.add('active');
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('navMenu').classList.remove('open');
+  window.location.hash = pageId;
+}
+
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('open');
+}
+
+function toggleDropdown(e) {
+  if (window.innerWidth <= 968) {
+    e.preventDefault();
+    e.currentTarget.parentElement.classList.toggle('open');
+  }
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  alert('Thank you for your message! We will get back to you shortly. For immediate assistance, please call 808-470-5555.');
+  e.target.reset();
+}
+
+// Init
+renderServicesGrid();
+if (window.location.hash) {
+  const hash = window.location.hash.substring(1);
+  navigate(hash);
+}
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.substring(1);
+  if (hash) navigate(hash);
+});
+</script>
+</body>
+</html>
